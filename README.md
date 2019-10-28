@@ -22,8 +22,8 @@
 |Column|Type|Options|
 |------|----|-------|
 |id|integer|null: true, unique : true, foreign_key: false, add_index: false|
-|user_id|references|null: true, unique : false, foreign_key: true, add_index: false|
-|group_id|references|null: true, unique : false, foreign_key: true, add_index: false|
+|user_id|references|null: true, unique : true, foreign_key: true, add_index: false|
+|group_id|references|null: true, unique : true, foreign_key: true, add_index: false|
 
 ### Messages
 |Column|Type|Options|
