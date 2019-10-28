@@ -31,17 +31,17 @@
 
 ## Association
 ### Usres 
-- has_many :messages
+- has_many :Messages
 - belongs_to :Users_Groups
 
 ### Groups
-- has_many :messages
+- has_many :Messages
 - belongs_to :Users_Groups
 
 ### Users_Groups
-- has_many :users
-- has_many :groups
+- has_many :Users
+- has_many :Groups
 
 ### Messages
-- belongs_to :users
-- belongs_to :groups
+- belongs_to :Users
+- belongs_to :Groups
