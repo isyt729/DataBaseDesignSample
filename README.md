@@ -1,4 +1,4 @@
-## Tbales
+## Tables
 ### Users
 |Column|Type|Options|
 |------|----|-------|
