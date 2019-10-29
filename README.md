@@ -32,11 +32,11 @@
 ### Usres 
 - has_many :Messages
 - has_many :Groups
-- belongs_to :Users_Group
+- belongs_to :Users_Group, through: :Groups
 
 ### Groups
 - has_many :Messages
-- belongs_to :Users_Group
+- belongs_to :Users_Group, through: :Users
 - belongs_to :User
 
 ### Users_Groups
