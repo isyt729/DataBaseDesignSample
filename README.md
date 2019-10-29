@@ -7,6 +7,7 @@
 
 ### Users
 |Column|Type|Options|
+|------|----|-------|
 
 ### Groups
 |Column|Type|Options|
