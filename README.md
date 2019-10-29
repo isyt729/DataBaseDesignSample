@@ -1,9 +1,9 @@
 ## Tables
 - optionについて
-  - null : trueの場合、NOT NULL制約を実装
-  - unique : trueの場合、一意性制約を実装
-  - foreign_key : trueの場合、外部キー制約を実装
-  - add_index : trueの場合、インデックスを貼る 
+  - null : NOT NULL制約を実装
+  - unique : 一意性制約を実装
+  - foreign_key : 外部キー制約を実装
+  - add_index : インデックスを貼る 
 
 ### Users
 |Column|Type|Options|
@@ -12,21 +12,21 @@
 ### Groups
 |Column|Type|Options|
 |------|----|-------|
-|name|string|null: true|
+|name|string|null|
 
 ### Users_Groups
 |Column|Type|Options|
 |------|----|-------|
-|user_id|references|null: true, unique : true, foreign_key: true|
-|group_id|references|null: true, unique : true, foreign_key: true|
+|user_id|references|null, unique, foreign_key|
+|group_id|references|null, unique, foreign_key|
 
 ### Messages
 |Column|Type|Options|
 |------|----|-------|
-|body|text|null: true|
+|body|text|null|
 |image|text||
-|user_id|references|null: true, foreign_key: true|
-|group_id|references|null: true, foreign_key: true|
+|user_id|references|null, foreign_key|
+|group_id|references|null, foreign_key|
 
 ## Association
 ### Usres 
