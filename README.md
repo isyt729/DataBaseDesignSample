@@ -7,7 +7,7 @@
 ### Users
 |Column|Type|Options|
 |------|----|-------|
-|name|string|null:false,add_index :Users, :name|
+|name|string|null:false,index: true|
 
 
 ### Groups
@@ -35,13 +35,13 @@
 ### Usres 
 - has_many :Messages
 - has_many :Groups, through: :Users_Group
-- has_many :Users_Group
+- has_many :Users_Groups
 
 
 ### Groups
 - has_many :Messages
 - has_many :Users, through: :Users_Group
-- has_many :Users_Group
+- has_many :Users_Groups
 
 ### Users_Groups
 - belongs_to :User
