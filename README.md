@@ -7,7 +7,7 @@
 ### Users
 |Column|Type|Options|
 |------|----|-------|
-|name|string|null:false|
+|name|string|null:false, add_index|
 
 ### Groups
 |Column|Type|Options|
