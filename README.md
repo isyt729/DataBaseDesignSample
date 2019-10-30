@@ -1,24 +1,52 @@
-# README
+## Tables
+- optionについて
+  - null : NOT NULL制約を実装
+  - foreign_key : 外部キー制約を実装
+  - add_index : インデックスを貼る 
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+### Users
+|Column|Type|Options|
+|------|----|-------|
+|name|string|null:false,index: true|
 
-Things you may want to cover:
 
-* Ruby version
+### Groups
+|Column|Type|Options|
+|------|----|-------|
+|name|string|null:false|
 
-* System dependencies
+### Users_Groups
+|Column|Type|Options|
+|------|----|-------|
+|user|references|null:false, foreign_key: true|
+|group|references|null:false, foreign_key: true|
 
-* Configuration
 
-* Database creation
+### Messages
+|Column|Type|Options|
+|------|----|-------|
+|body|text||
+|image|text||
+|user|references|null:false, foreign_key: true|
+|group|references|null:false, foreign_key: true|
 
-* Database initialization
 
-* How to run the test suite
+## Association
+### Usres 
+- has_many :Messages
+- has_many :Groups, through: :Users_Groups
+- has_many :Users_Groups
 
-* Services (job queues, cache servers, search engines, etc.)
 
-* Deployment instructions
+### Groups
+- has_many :Messages
+- has_many :Users, through: :Users_Groups
+- has_many :Users_Groups
 
-* ...
+### Users_Groups
+- belongs_to :User
+- belongs_to :Group
+
+### Messages
+- belongs_to :User
+- belongs_to :Group
