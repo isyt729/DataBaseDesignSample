@@ -9,6 +9,7 @@
 |------|----|-------|
 |name|string|null:false,add_index :Users, :name|
 
+
 ### Groups
 |Column|Type|Options|
 |------|----|-------|
@@ -20,6 +21,7 @@
 |user|references|null:false, foreign_key: true|
 |group|references|null:false, foreign_key: true|
 
+
 ### Messages
 |Column|Type|Options|
 |------|----|-------|
@@ -28,11 +30,13 @@
 |user|references|null:false, foreign_key: true|
 |group|references|null:false, foreign_key: true|
 
+
 ## Association
 ### Usres 
 - has_many :Messages
 - has_many :Groups, through: :Users_Group
 - has_many :Users_Group
+
 
 ### Groups
 - has_many :Messages
