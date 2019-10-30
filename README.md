@@ -34,13 +34,13 @@
 ## Association
 ### Usres 
 - has_many :Messages
-- has_many :Groups, through: :Users_Group
+- has_many :Groups, through: :Users_Groups
 - has_many :Users_Groups
 
 
 ### Groups
 - has_many :Messages
-- has_many :Users, through: :Users_Group
+- has_many :Users, through: :Users_Groups
 - has_many :Users_Groups
 
 ### Users_Groups
