@@ -8,6 +8,7 @@
 ### Users
 |Column|Type|Options|
 |------|----|-------|
+|name|string|null|
 
 ### Groups
 |Column|Type|Options|
@@ -23,21 +24,19 @@
 ### Messages
 |Column|Type|Options|
 |------|----|-------|
-|body|text|null|
+|body|text||
 |image|text||
-|user_id|references|null, foreign_key|
-|group_id|references|null, foreign_key|
+|user|references|null, foreign_key|
+|group|references|null, foreign_key|
 
 ## Association
 ### Usres 
 - has_many :Messages
-- has_many :Groups
-- belongs_to :Users_Group, through: :Groups
+- belongs_to :Group, through: :Users_Group
 
 ### Groups
 - has_many :Messages
-- belongs_to :Users_Group, through: :Users
-- belongs_to :User
+- belongs_to :User, through: :Users_Group
 
 ### Users_Groups
 - belongs_to :User
