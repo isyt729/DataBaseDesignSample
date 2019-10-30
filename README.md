@@ -7,26 +7,26 @@
 ### Users
 |Column|Type|Options|
 |------|----|-------|
-|name|string|null|
+|name|string|null:false|
 
 ### Groups
 |Column|Type|Options|
 |------|----|-------|
-|name|string|null|
+|name|string|null:false|
 
 ### Users_Groups
 |Column|Type|Options|
 |------|----|-------|
-|user|references|null, foreign_key|
-|group|references|null, foreign_key|
+|user|references|null:false, foreign_key|
+|group|references|null:false, foreign_key|
 
 ### Messages
 |Column|Type|Options|
 |------|----|-------|
 |body|text||
 |image|text||
-|user|references|null, foreign_key|
-|group|references|null, foreign_key|
+|user|references|null:false, foreign_key|
+|group|references|null:false, foreign_key|
 
 ## Association
 ### Usres 
