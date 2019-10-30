@@ -1,7 +1,6 @@
 ## Tables
 - optionについて
   - null : NOT NULL制約を実装
-  - unique : 一意性制約を実装
   - foreign_key : 外部キー制約を実装
   - add_index : インデックスを貼る 
 
@@ -18,8 +17,8 @@
 ### Users_Groups
 |Column|Type|Options|
 |------|----|-------|
-|user_id|references|null, unique, foreign_key|
-|group_id|references|null, unique, foreign_key|
+|user|references|null, foreign_key|
+|group|references|null, foreign_key|
 
 ### Messages
 |Column|Type|Options|
@@ -32,11 +31,11 @@
 ## Association
 ### Usres 
 - has_many :Messages
-- belongs_to :Group, through: :Users_Group
+- has_many :Groups, through: :Users_Group
 
 ### Groups
 - has_many :Messages
-- belongs_to :User, through: :Users_Group
+- has_many :Users, through: :Users_Group
 
 ### Users_Groups
 - belongs_to :User
